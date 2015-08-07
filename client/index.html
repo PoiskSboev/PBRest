@@ -9,6 +9,14 @@
         function printData(json) {
             $("#wholeJson").html(stringify_(json));
         }
+		
+		function printServicesData(json) {
+            $("#servicesJson").html(stringify_(json));
+        }
+		
+		function printSeatMapData(json) {
+            $("#seatMapJson").html(stringify_(json));
+        }
 
         function stringify_(value) {
             return JSON.stringify(value, null, "\t");
@@ -18,46 +26,34 @@
 </head>
 <body onLoad='doAjax("NVR123", "departureDate", "bookingNumber");'>
 
-<div style="margin-left: 50px; width: 300px; float: left">
-    <H2>Passenger information:</H2>
+<div style="margin-left: 50px; width: 450px; float: left">
+    <H2>Services information:</H2>
 
     <table border="1">
         <tr>
-            <td class="noColor">Baby Girl</td>
-			<td class="noColor">INF</td>
+            <td class="noColor">Extra leg room</td>
+			<td class="noColor">11.90 EUR</td>
         </tr>		
 		<tr>
-			<td class="noColor">God Father</td>
-			<td class="noColor">ADT</td>
-        </tr>		
-		<tr> 
-			<td class="noColor">Small John</td>
-			<td class="noColor">CHD</td>
-		</tr>
-		
+			<td class="noColor">Front row</td>
+			<td class="noColor">15.90 EUR</td>
+        </tr>			
     </table>   
+	<pre id="servicesJson"></pre>
 </div>
 
-<div style="margin-left: 50px; width: 300px; float: left">
+<div style="margin-left: 50px; width: 450px; float: left">
     <H2>Seat allocation information:</H2>
 
-    <table class="tbSelectability">
+    <table class="tbSelectability" width="60">
         <tr class="free">
-            <td>*ADULT</td>
-            <td>*ADULT
-			*INFANT</td>
-            <td>*ADULT
-			*CHILD
-			*INFANT</td>
-			<td class="noColor">free</td>
+            <td> * Extra leg room</td>
         </tr>
-		<tr class="occupied" height="55">
-            <td></td>
-            <td></td>
-            <td></td>
-			<td class="noColor">occupied</td>
+		<tr class="free" height="60">
+            <td > * Exit</td>
         </tr>
     </table>   
+	<pre id="seatMapJson"></pre>
 </div>
 
 <div style="margin-left: 50px; float: left">

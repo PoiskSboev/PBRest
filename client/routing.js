@@ -14,6 +14,8 @@ function doAjax(flightNumber, departureDate, bookingNumber) {
     })
         .done(function (data) {
             printData(data);
+			printServicesData(data.definitions.services);
+			printSeatMapData(data.seatmap)
         });
 }
 

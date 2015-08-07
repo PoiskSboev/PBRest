@@ -1,32 +1,40 @@
 {
 	"context": {
 		"passengers": [
-			{	
-				"id": "1", 
-				"name": "Baby Girl", 
-				"type": "INF", 
-				"properties": [ 
-				]
-			},
 			{
 				"id": "2", 
 				"name": "God Father", 
 				"type": "ADT", 
 				"properties": [
 				]
+			}
+		]
+	},
+	"definitions": {
+		"services": [
+			{
+				"id": "304", 
+				"description": "Extra leg room", 
+				"price": { 
+					"amount": "11.90", 
+					"currency": "EUR"
+				}
 			},
 			{
-				"id": "3", 
-				"name": "Small John", 
-				"type": "CHD", 
-				"properties": [	
-				]				
+				"id": "306", 
+				"description": "Front row", 
+				"price": { 
+					"amount": "15.90", 
+					"currency": "EUR"
+				}
 			}
+			
 		]
 	},
 	"seatmap": [
 		{	
 			"id": "1A", 
+			"service_ref": "306", 
 			"allocation": {
 				"available": true, 
 				"eligeble_passenger_types": [ 
@@ -35,44 +43,16 @@
 			} 
 		},
 		{
-			"id": "1B", 
-			"allocation": {
-				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT", 
-					"INF"
-				]				
-			}
-		},
-		{
-			"id": "1C", 
-			"allocation": {
-				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT", 
-					"CHD",
-					"INF"
-				]				
-			}
-		},
-		{	
 			"id": "2A", 
+			"service_ref": "304", 
 			"allocation": {
-				"available": false				
-			} 
-		},
-		{
-			"id": "2B", 
-			"allocation": {
-				"available": false			
-			}
-		},
-		{
-			"id": "2C", 
-			"allocation": {
-				"available": false				
+				"available": true, 
+				"eligeble_passenger_types": [ 
+					"ADT"
+				]				
 			}
 		}
+
 	]
 }
 
