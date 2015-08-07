@@ -2,7 +2,7 @@
 	"context": {
 		"passengers": [
 			{
-				"id": "2", 
+				"id": "1", 
 				"name": "God Father", 
 				"type": "ADT", 
 				"properties": [
@@ -37,8 +37,8 @@
 			"service_ref": "306", 
 			"allocation": {
 				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT"
+				"eligeble_passenger_ids": [ 
+					"1"
 				]				
 			} 
 		},
@@ -47,8 +47,8 @@
 			"service_ref": "304", 
 			"allocation": {
 				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT"
+				"eligeble_passenger_ids": [ 
+					"1"
 				]				
 			}
 		}
