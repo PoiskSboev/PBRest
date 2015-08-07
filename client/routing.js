@@ -5,10 +5,10 @@ function allocation() {
     doAjax('NVR123', 'departureDate');
 }
 
-function doAjax(flightNumber, departureDate) {
+function doAjax(flightNumber, departureDate, bookingNumber) {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/api/flight/' + flightNumber + '/' + departureDate + '/allocation',
+        url: 'http://localhost:3000/api/flight/' + flightNumber + '/' + departureDate + '/allocation/' + bookingNumber,
         dataType: "json",
         success: null
     })

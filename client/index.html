@@ -16,7 +16,28 @@
     </script>
     <script src="routing.js"></script>
 </head>
-<body onLoad='doAjax("NVR123", "departureDate");'>
+<body onLoad='doAjax("NVR123", "departureDate", "bookingNumber");'>
+
+<div style="margin-left: 50px; width: 300px; float: left">
+    <H2>Passenger information:</H2>
+
+    <table border="1">
+        <tr>
+            <td class="noColor">Baby Girl</td>
+			<td class="noColor">INF</td>
+        </tr>		
+		<tr>
+			<td class="noColor">God Father</td>
+			<td class="noColor">ADT</td>
+        </tr>		
+		<tr> 
+			<td class="noColor">Small John</td>
+			<td class="noColor">CHD</td>
+		</tr>
+		
+    </table>   
+</div>
+
 <div style="margin-left: 50px; width: 300px; float: left">
     <H2>Seat allocation information:</H2>
 
@@ -36,8 +57,7 @@
             <td></td>
 			<td class="noColor">occupied</td>
         </tr>
-    </table>
-   
+    </table>   
 </div>
 
 <div style="margin-left: 50px; float: left">
