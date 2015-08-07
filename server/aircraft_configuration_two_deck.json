@@ -1,0 +1,14 @@
+{
+  "aircraft": {
+    "decks": [
+      {
+        "id": "0",
+        "backdrop_id": "ay_172"
+      },
+      {
+        "id": "1",
+        "backdrop_id": "ay_3150"
+      }
+    ]
+  }
+}

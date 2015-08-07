@@ -1,83 +1,28 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="routing.js"></script>
     <script type="text/javascript">
-
-        function showSeating(json) {
-            var seat = json.definitions.seatmap[0];
-            $("#seatPosition").html("<b>Seat:</b> </br>" + stringify_(seat));
-
-            var seatTypesMap = getMapFromList(json.definitions.seats);
-            $("#seatSize").html("<b>Seat_type_ref:</b></br> " + (stringify_(seatTypesMap.get(seat["seat_type_ref"]))));
-
-            var deckTypesMap = getMapFromList(json.aircraft.decks);
-            $("#seatDeck").html("<b>Deck_ref:</b></br> " + stringify_(deckTypesMap.get(seat["deck_ref"])));
-
-            var constraintTypesMap = getMapFromList(json.definitions.constraints);
-            var seatConstraints = [];
-            seat.constraint_refs.forEach(function (value) {
-                seatConstraints.push(constraintTypesMap.get(value));
-            });
-            $("#seatConstraint").html("<b>Constraint types:</b></br> " + stringify_(seatConstraints));
-
-            var groupTypesMap = getMapFromList(json.definitions.groups);
-            var seatGroups = [];
-            seat.group_refs.forEach(function (value) {
-                seatGroups.push(groupTypesMap.get(value));
-            });
-            $("#group").html("<b>Group:</b></br> " + stringify_(seatGroups));
-
-            $("#allJson").html(stringify_(json));
-        }
-
         function stringify_(value) {
-            return JSON.stringify(value, null, "\t");
-        }
-        function getMapFromList(someList) {
-            var result = new Map();
-            for (var i = 0; i < someList.length; i++) {
-                result.set(someList[i].id, someList[i]);
-            }
-            return result;
+            return JSON.stringify(value, null, 2);
         }
     </script>
-    <script src="routing.js"></script>
 </head>
 <body onLoad='doAjax("NVR123", "departureDate");'>
+<div>
+    <ul>
+        <li><a href="single-deck">Single-deck</a></li>
+        <li><a href="double-deck">Double-deck</a></li>
+    </ul>
+</div>
+
 <img id="backdropIn" src="" style="float: left">
 <img id="backdropOut" src="" style="float: left">
-
-<div style="margin-left: 50px; width: 300px; float: left">
-    <H2>Seat information:</H2>
-
-    <table class="tbClass">
-        <tr class="business">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="noColor">business</td>
-        </tr>
-        <tr class="economy">
-            <td></td>
-            <td></td>
-            <td></td>
-            <td class="noColor">economy</td>
-        </tr>
-    </table>
-
-    <pre id="seatPosition"></pre>
-    <pre id="seatSize"></pre>
-    <pre id="seatDeck"></pre>
-    <pre id="seatConstraint"></pre>
-    <pre id="group"></pre>
-</div>
 <div style="margin-left: 50px; float: left">
     <H2>All JSON</H2>
     <pre id="allJson"></pre>
 </div>
-
 </body>
 </html>
