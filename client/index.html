@@ -9,6 +9,13 @@
         function printData(json) {
             $("#wholeJson").html(stringify_(json));
         }
+		
+		function printPassengerData(json) {
+            $("#passengerJson").html(stringify_(json));
+        }
+		function printSeatMapData(json) {
+            $("#seatMapJson").html(stringify_(json));
+        }
 
         function stringify_(value) {
             return JSON.stringify(value, null, "\t");
@@ -18,7 +25,7 @@
 </head>
 <body onLoad='doAjax("NVR123", "departureDate", "bookingNumber");'>
 
-<div style="margin-left: 50px; width: 300px; float: left">
+<div style="margin-left: 50px; width: 400px; float: left">
     <H2>Passenger information:</H2>
 
     <table border="1">
@@ -33,12 +40,13 @@
 		<tr> 
 			<td class="noColor">Small John</td>
 			<td class="noColor">CHD</td>
-		</tr>
-		
-    </table>   
+		</tr>		
+    </table> 
+	<H3>Passenger info from json</H3>
+    <pre id="passengerJson"></pre>
 </div>
 
-<div style="margin-left: 50px; width: 300px; float: left">
+<div style="margin-left: 50px; width: 450px; float: left">
     <H2>Seat allocation information:</H2>
 
     <table class="tbSelectability">
@@ -58,6 +66,8 @@
 			<td class="noColor">occupied</td>
         </tr>
     </table>   
+	<H3>seatmap from json</H3>
+	<pre id="seatMapJson"></pre>
 </div>
 
 <div style="margin-left: 50px; float: left">
