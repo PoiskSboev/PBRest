@@ -29,8 +29,8 @@
 			"id": "1A", 
 			"allocation": {
 				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT"
+				"eligeble_passenger_ids": [ 
+					"2"
 				]				
 			} 
 		},
@@ -38,9 +38,9 @@
 			"id": "1B", 
 			"allocation": {
 				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT", 
-					"INF"
+				"eligeble_passenger_ids": [ 
+					"1", 
+					"2"
 				]				
 			}
 		},
@@ -48,10 +48,10 @@
 			"id": "1C", 
 			"allocation": {
 				"available": true, 
-				"eligeble_passenger_types": [ 
-					"ADT", 
-					"CHD",
-					"INF"
+				"eligeble_passenger_ids": [ 
+					"1", 
+					"2",
+					"3"
 				]				
 			}
 		},
