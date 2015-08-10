@@ -23,3 +23,7 @@ Got to [http://localhost:3002](http://localhost:3002)
 ## Project has two tags
 * git checkout Backdrop 
 * git checkout Seat
+* git checkout Constraints_Groups
+* git allocations_step1
+* git allocation_step2
+* git allocation_step3
