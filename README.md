@@ -20,7 +20,7 @@ node dev
 
 Got to [http://localhost:3002](http://localhost:3002)
 
-## Project has two tags
+## Project has six tags
 * git checkout Backdrop 
 * git checkout Seat
 * git checkout Constraints_Groups
