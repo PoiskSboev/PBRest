@@ -8,7 +8,7 @@ function allocation() {
 function doAjax(flightNumber, departureDate, bookingNumber) {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:3000/api/flight/' + flightNumber + '/' + departureDate + '/allocation/' + bookingNumber,
+        url: 'http://localhost:3000/api/flight/' + flightNumber + '/' + departureDate + '/allocation/?bookingNumber=' + bookingNumber,
         dataType: "json",
         success: null
     })
