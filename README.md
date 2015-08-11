@@ -21,9 +21,9 @@ node dev
 Got to [http://localhost:3002](http://localhost:3002)
 
 ## Project has six tags
-* git checkout Backdrop 
-* git checkout Seat
-* git checkout constraints_groups
-* git checkout allocations_step1
-* git checkout allocation_step2
-* git checkout allocation_step3
+* git checkout configuration-backdrop 
+* git checkout configuration-seat
+* git checkout configuration-constraints-groups
+* git checkout allocation-seat-availability
+* git checkout allocation-passengers
+* git checkout allocation-services
