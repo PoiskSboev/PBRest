@@ -1,14 +1,4 @@
-page('/single-deck', singleDeck);
-page('/double-deck', doubleDeck);
 page();
-
-function singleDeck() {
-    doAjax('NVR123', 'departureDate');
-}
-
-function doubleDeck() {
-    doAjax('NVR124', 'departureDate');
-}
 
 function doAjax(flightNumber, departureDate) {
     $.ajax({
@@ -22,13 +12,6 @@ function doAjax(flightNumber, departureDate) {
             var imgSrc = "http://localhost:3001/" + backdropId + ".gif";
             $("#backdropIn").attr("src", imgSrc);
 
-            if (data.aircraft.decks.length > 1) {
-                backdropId = data.aircraft.decks[1]['backdrop_id'];
-                imgSrc = "http://localhost:3001/" + backdropId + ".gif";
-                $("#backdropOut").attr("src", imgSrc);
-            } else {
-                $("#backdropOut").attr("src", "");
-            }
             showSeating(data);
         });
 }
