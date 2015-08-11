@@ -15,7 +15,7 @@
             var deckTypesMap = getMapFromList(json.aircraft.decks);
             $("#seatDeck").html("<b>Deck_ref:</b> " + stringify_(deckTypesMap.get(seat["deck_ref"])));
 
-            $("#allJson").html(stringify_(json));
+            $("#wholeJson").html(stringify_(json));
         }
 
         function getMapFromList(someList) {
@@ -46,8 +46,8 @@
     <pre id="seatDeck"></pre>
 </div>
 <div style="margin-left: 50px; float: left">
-    <H2>All JSON</H2>
-    <pre id="allJson"></pre>
+    <H2>Whole JSON</H2>
+    <pre id="wholeJson"></pre>
 </div>
 </body>
 </html>
