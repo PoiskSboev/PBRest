@@ -30,7 +30,7 @@
             });
             $("#group").html("<b>Group:</b></br> " + stringify_(seatGroups));
 
-            $("#allJson").html(stringify_(json));
+            $("#wholeJson").html(stringify_(json));
         }
 
         function stringify_(value) {
@@ -48,7 +48,6 @@
 </head>
 <body onLoad='doAjax("NVR123", "departureDate");'>
 <img id="backdropIn" src="" style="float: left">
-<img id="backdropOut" src="" style="float: left">
 
 <img id="schema" src="schema.png" style="float: left" height="400">
 <div style="margin-left: 50px; width: 300px; float: left">
@@ -76,8 +75,8 @@
     <pre id="group"></pre>
 </div>
 <div style="margin-left: 50px; float: left">
-    <H2>All JSON</H2>
-    <pre id="allJson"></pre>
+    <H2>Whole JSON</H2>
+    <pre id="wholeJson"></pre>
 </div>
 
 </body>
